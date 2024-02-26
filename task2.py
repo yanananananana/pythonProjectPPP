@@ -7,7 +7,6 @@ for i in range(len(data)):
     if i>0:
         data[i][0] = data[i][0].split("-")
 headlines = data.pop(0)
-print(data[0][0][1])
 for i in range(len(data)):
     for j in range(len(data)-1):
         if int(data[j][0][1]) < int(data[j+1][0][1]):
