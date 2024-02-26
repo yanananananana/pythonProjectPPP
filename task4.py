@@ -6,7 +6,7 @@ def gen(i):
     password = password.upper()
     return password
 
-with open("space.txt", uncoding = "utf-8") as file:
+with open("space.txt", encoding = "utf-8") as file:
     data = list(file)
 for i in range(len(data)):
     data[i] = data[i].split("*")
@@ -15,7 +15,7 @@ for i in range(len(data)):
 data[0].append("password")
 for i in range(1,len(data)):
     data[i].append(gen(data[i])
-with open("space_uniq_password.csv", "w",uncoding = "utf-8") as file:
+with open("space_uniq_password.csv", "w",encoding = "utf-8") as file:
     writing = writer(file, delimiter=";")
     writing.writerows(data)
 file.close()

@@ -1,7 +1,8 @@
+from csv import writer, reader
 with open('space.txt') as file:
     key = list(file)
 for i in range(len(key)):
-    key[i] = key[i].split['*']
+    key[i] = key[i].split('*')
     if i+1 != len(key):
         key[i][-1] = key[i][-1][:-1]
 
@@ -15,9 +16,9 @@ for i in range(len(key)):
         else:
             x = -1 * (int(name[1][0])+int(dir[0])) * 4 + len(key[i][1])
         if int(name[1][1]) > 3:
-            y = int(name[1][1]) + len(key[i][1]) + dir[1]
+            y = int(name[1][1]) + len(key[i][1]) + int(dir[1])
         else:
-            y = -1 * (int(name[1][0]) + dir[1] * int(name[1][1]))
+            y = -1 * (int(name[1][0]) + int(dir[1]) * int(name[1][1]))
         key[i][2] = f'{x}{y}'
 
 file = open('space_new.txt', 'w', encoding = "utf-8")
